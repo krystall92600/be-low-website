@@ -3,7 +3,48 @@
  * Gère les fonctionnalités de base du site
  */
 
+// Utilitaires
 // ============================================
+
+// Debounce function pour les événements de scroll/resize
+function debounce(func, wait) {
+=======
+// ============================================
+// Scroll to Top Button
+// ============================================
+function initScrollToTop() {
+    const scrollToTopBtn = document.createElement('button');
+    scrollToTopBtn.className = 'scroll-to-top';
+    scrollToTopBtn.innerHTML = '↑';
+    scrollToTopBtn.setAttribute('aria-label', 'Retour en haut');
+    document.body.appendChild(scrollToTopBtn);
+    
+    // Affiche/masque le bouton selon la position de scroll
+    const toggleButton = throttle(function() {
+        if (window.pageYOffset > 300) {
+            scrollToTopBtn.classList.add('visible');
+        } else {
+            scrollToTopBtn.classList.remove('visible');
+        }
+    }, 100);
+    
+    window.addEventListener('scroll', toggleButton, { passive: true });
+    
+    // Clic sur le bouton
+    scrollToTopBtn.addEventListener('click', function() {
+        window.scrollTo({
+            top: 0,
+            behavior: 'smooth'
+        });
+    });
+}
+
+// ============================================
+// Utilitaires
+// ============================================
+
+// Debounce function pour les événements de scroll/resize
+function debounce(func, wait) {============================================
 // DOM Content Loaded
 // ============================================
 document.addEventListener('DOMContentLoaded', function() {
