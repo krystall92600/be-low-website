@@ -11,9 +11,10 @@
 
 :root {
     /* Couleurs principales */
-    --color-primary: #0056b3;
-    --color-primary-light: #337ab7;
-    --color-primary-dark: #003d7a;
+    --color-primary: #1d3358;
+    --color-primary-light: #2a4a7c;
+    --color-primary-dark: #0f1d35;
+    --color-primary-darker: #0a1425;
     --color-secondary: #2e8b57;
     --color-text: #1a1a1a;
     --color-text-light: #666666;
@@ -367,10 +368,10 @@ a:hover {
 }
 
 .hero-text h1 {
-    font-size: var(--font-size-xxl);
+    font-size: 4rem;
     margin-bottom: var(--spacing-md);
     color: var(--color-primary);
-    line-height: 1.2;
+    line-height: 1.1;
 }
 
 .hero-subtitle {
@@ -385,6 +386,8 @@ a:hover {
     display: flex;
     justify-content: center;
     align-items: center;
+    overflow: hidden;
+    border-radius: var(--border-radius-lg);
 }
 
 .hero-img {
@@ -393,6 +396,7 @@ a:hover {
     border-radius: var(--border-radius-lg); /* 12px */
     box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15); /* Ombre moderne */
     transition: transform 0.3s ease;
+    transform-origin: center;
 }
 
 .hero-img:hover {
