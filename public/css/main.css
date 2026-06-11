@@ -230,7 +230,7 @@ a:hover {
 /* Cards */
 .card {
     background-color: var(--color-bg);
-    border-radius: var(--border-radius-lg);
+    border-radius: 20px;
     padding: var(--spacing-lg);
     box-shadow: 0 8px 24px rgba(0, 0, 0, 0.18);
     transition: transform var(--transition-normal), box-shadow var(--transition-normal);
@@ -438,15 +438,15 @@ a:hover {
 /* Footer */
 .footer {
     background-color: #2a2a2a;
-    color: var(--color-bg);
-    padding: 3rem 0 2rem;
+    color: #cccccc;
+    padding: 2rem 0 1.5rem;
 }
 
 .footer-content {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    gap: var(--spacing-lg);
-    margin-bottom: 2rem;
+    gap: var(--spacing-md);
+    margin-bottom: 1.5rem;
 }
 
 .footer-section h3,
@@ -454,7 +454,7 @@ a:hover {
 .footer-section a,
 .footer-section ul,
 .footer-section li {
-    color: var(--color-bg);
+    color: #cccccc;
 }
 
 .footer-section h3 {
@@ -479,9 +479,8 @@ a:hover {
 
 .footer-bottom {
     text-align: center;
-    padding-top: 1.5rem;
+    padding: 1rem 0;
     border-top: 1px solid rgba(255, 255, 255, 0.1);
-    padding-bottom: 1.5rem;
 }
 
 .social-links {
@@ -491,7 +490,7 @@ a:hover {
 }
 
 .social-links a {
-    color: var(--color-bg);
+    color: #cccccc;
     font-size: 1.5rem;
 }
 
