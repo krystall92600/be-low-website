@@ -107,8 +107,8 @@ a:hover {
 
 /* Header */
 .header {
-    background-color: rgba(255, 255, 255, 0.95);
-    backdrop-filter: blur(12px);
+    background-color: rgba(255, 255, 255, 0.85);
+    backdrop-filter: blur(14px);
     padding: 0.5rem 0; /* Moitié de var(--spacing-sm) = 0.5rem */
     box-shadow: var(--shadow-sm);
     position: sticky;
@@ -118,8 +118,8 @@ a:hover {
 }
 
 .header.scrolled {
-    background-color: rgba(255, 255, 255, 0.98);
-    backdrop-filter: blur(16px);
+    background-color: rgba(255, 255, 255, 0.92);
+    backdrop-filter: blur(18px);
     box-shadow: var(--shadow-md);
 }
 
