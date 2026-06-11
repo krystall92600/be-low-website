@@ -236,30 +236,76 @@ a:hover {
 
 /* Hero Section */
 .hero {
-    background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url('../assets/images/hero-background.jpg');
-    background-size: cover;
-    background-position: center;
-    color: var(--color-bg);
-    text-align: center;
-    padding: var(--spacing-xl) var(--spacing-md);
-    min-height: 60vh;
+    background-color: var(--color-bg);
+    color: var(--color-text);
+    padding: var(--spacing-xxl) 0;
+    overflow: hidden;
+}
+
+.hero-content {
     display: flex;
-    flex-direction: column;
+    align-items: center;
+    gap: var(--spacing-xxl);
+}
+
+.hero-text {
+    flex: 1;
+    max-width: 50%;
+}
+
+.hero-text h1 {
+    font-size: var(--font-size-xxl);
+    margin-bottom: var(--spacing-md);
+    color: var(--color-primary);
+    line-height: 1.2;
+}
+
+.hero-subtitle {
+    font-size: var(--font-size-md);
+    color: var(--color-text-light);
+    margin-bottom: var(--spacing-lg);
+    line-height: 1.8;
+}
+
+.hero-image {
+    flex: 1;
+    display: flex;
     justify-content: center;
     align-items: center;
 }
 
-.hero h1 {
-    font-size: var(--font-size-xxl);
-    margin-bottom: var(--spacing-md);
-    color: var(--color-bg);
+.hero-img {
+    max-width: 100%;
+    height: auto;
+    border-radius: var(--border-radius-lg); /* 12px */
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15); /* Ombre moderne */
+    transition: transform 0.3s ease;
 }
 
-.hero p {
-    font-size: var(--font-size-lg);
-    max-width: 700px;
-    margin-bottom: var(--spacing-lg);
-    color: rgba(255, 255, 255, 0.9);
+.hero-img:hover {
+    transform: scale(1.02);
+}
+
+.hero-buttons {
+    display: flex;
+    gap: var(--spacing-md);
+    margin-top: var(--spacing-lg);
+}
+
+@media (max-width: 768px) {
+    .hero-content {
+        flex-direction: column;
+        text-align: center;
+    }
+    
+    .hero-text {
+        max-width: 100%;
+        margin-bottom: var(--spacing-lg);
+    }
+    
+    .hero-text h1 {
+        font-size: var(--font-size-xl);
+    }
 }
 
 /* Footer */
