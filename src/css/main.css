@@ -2,6 +2,23 @@
    Be-low Website - Main Stylesheet
    ============================================ */
 
+/* Chargement des polices Inter */
+@font-face {
+    font-family: 'Inter';
+    src: url('../assets/fonts/Inter (police)/Inter-VariableFont_opsz,wght.ttf') format('truetype-variations');
+    font-weight: 100 900;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Inter';
+    src: url('../assets/fonts/Inter (police)/Inter-Italic-VariableFont_opsz,wght.ttf') format('truetype-variations');
+    font-weight: 100 900;
+    font-style: italic;
+    font-display: swap;
+}
+
 /* CSS Reset */
 *, *::before, *::after {
     box-sizing: border-box;
@@ -11,9 +28,10 @@
 
 :root {
     /* Couleurs principales */
-    --color-primary: #0056b3;
-    --color-primary-light: #337ab7;
-    --color-primary-dark: #003d7a;
+    --color-primary: #1d3358;
+    --color-primary-light: #2a4a7c;
+    --color-primary-dark: #0f1d35;
+    --color-primary-darker: #0a1425;
     --color-secondary: #2e8b57;
     --color-text: #1a1a1a;
     --color-text-light: #666666;
@@ -75,6 +93,7 @@ h1, h2, h3, h4, h5, h6 {
     font-weight: 700;
     line-height: 1.2;
     margin-bottom: var(--spacing-sm);
+    color: var(--color-primary);
 }
 
 h1 { font-size: var(--font-size-xxl); }
@@ -84,6 +103,7 @@ h4 { font-size: var(--font-size-md); }
 
 p {
     margin-bottom: var(--spacing-md);
+    color: var(--color-text);
 }
 
 a {
@@ -159,25 +179,13 @@ a:hover {
 }
 
 .section {
-    padding: var(--spacing-xl) 0;
+    padding: 8rem 0;
 }
 
 .section-title {
     text-align: center;
     margin-bottom: var(--spacing-lg);
-    position: relative;
-}
-
-.section-title::after {
-    content: '';
-    position: absolute;
-    bottom: -10px;
-    left: 50%;
-    transform: translateX(-50%);
-    width: 60px;
-    height: 4px;
-    background-color: var(--color-primary);
-    border-radius: 2px;
+    color: var(--color-primary);
 }
 
 /* Buttons */
@@ -234,32 +242,90 @@ a:hover {
     margin-bottom: var(--spacing-md);
 }
 
-/* Hero Section */
+/* Hero Section - Page d'accueil */
 .hero {
-    background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url('../assets/images/hero-background.jpg');
-    background-size: cover;
-    background-position: center;
-    color: var(--color-bg);
-    text-align: center;
-    padding: var(--spacing-xl) var(--spacing-md);
-    min-height: 60vh;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
+    background-color: var(--color-bg);
+    color: var(--color-text);
+    padding: 8rem 0;
+    overflow: hidden;
 }
 
-.hero h1 {
+.hero-content {
+    display: flex;
+    align-items: center;
+    gap: var(--spacing-xxl);
+    flex-wrap: wrap;
+}
+
+.hero-text {
+    flex: 1;
+    max-width: 50%;
+    min-width: 350px;
+}
+
+.hero-text h1 {
     font-size: var(--font-size-xxl);
     margin-bottom: var(--spacing-md);
-    color: var(--color-bg);
+    color: var(--color-primary);
+    line-height: 1.1;
 }
 
-.hero p {
-    font-size: var(--font-size-lg);
-    max-width: 700px;
+.hero-subtitle {
+    font-size: var(--font-size-md);
+    color: var(--color-text-light);
     margin-bottom: var(--spacing-lg);
-    color: rgba(255, 255, 255, 0.9);
+    line-height: 1.8;
+    max-width: 600px;
+}
+
+.hero-image {
+    flex: 1;
+    min-width: 350px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+}
+
+.hero-img {
+    max-width: 100%;
+    height: auto;
+    border-radius: var(--border-radius-lg);
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15);
+    transition: transform 0.3s ease;
+}
+
+.hero-img:hover {
+    transform: scale(1.02);
+}
+
+.hero-buttons {
+    display: flex;
+    gap: var(--spacing-md);
+    margin-top: var(--spacing-lg);
+}
+
+/* Hero pour les pages internes (expertises, mission, etc.) */
+.page-hero {
+    background-color: var(--color-bg);
+    color: var(--color-text);
+    padding: 8rem 0;
+    text-align: center;
+}
+
+.page-hero h1 {
+    font-size: var(--font-size-xxl);
+    margin-bottom: var(--spacing-md);
+    color: var(--color-primary);
+    line-height: 1.2;
+}
+
+.page-hero .page-subtitle {
+    font-size: var(--font-size-md);
+    color: var(--color-text-light);
+    max-width: 800px;
+    margin: 0 auto var(--spacing-xl);
+    line-height: 1.8;
 }
 
 /* Footer */
@@ -319,16 +385,27 @@ a:hover {
         display: none; /* À remplacer par un menu hamburger */
     }
     
-    .hero h1 {
+    .hero-content {
+        flex-direction: column;
+        text-align: center;
+    }
+    
+    .hero-text {
+        max-width: 100%;
+        margin-bottom: var(--spacing-lg);
+    }
+    
+    .hero-text h1 {
         font-size: var(--font-size-xl);
     }
     
-    .hero p {
-        font-size: var(--font-size-md);
+    .hero-image {
+        max-width: 100%;
+        margin-top: var(--spacing-lg);
     }
     
     .section {
-        padding: var(--spacing-lg) 0;
+        padding: 4rem 0;
     }
 }
 
