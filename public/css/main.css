@@ -361,10 +361,12 @@ a:hover {
 }
 
 .hero-text h1 {
-    font-size: var(--font-size-xxl);
-    margin-bottom: var(--spacing-md);
+    font-size: 10rem;
+    margin-bottom: var(--spacing-xl);
     color: var(--color-primary);
-    line-height: 1.1;
+    line-height: 0.9;
+    font-weight: 700;
+    letter-spacing: -0.02em; /* Pour un rendu plus moderne */
 }
 
 .hero-subtitle {
@@ -490,10 +492,12 @@ a:hover {
     .hero-text {
         max-width: 100%;
         margin-bottom: var(--spacing-lg);
+        text-align: center;
     }
     
     .hero-text h1 {
-        font-size: var(--font-size-xl);
+        font-size: 5rem;
+        line-height: 0.9;
     }
     
     .hero-image {
