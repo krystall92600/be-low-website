@@ -109,7 +109,7 @@ a:hover {
 .header {
     background-color: rgba(255, 255, 255, 0.95);
     backdrop-filter: blur(12px);
-    padding: var(--spacing-sm) 0;
+    padding: 0.5rem 0; /* Moitié de var(--spacing-sm) = 0.5rem */
     box-shadow: var(--shadow-sm);
     position: sticky;
     top: 0;
@@ -136,8 +136,9 @@ a:hover {
     padding: 0 var(--spacing-md);
 }
 
+/* Logo réduit pour équilibrer */
 .logo img {
-    max-width: 160px;
+    max-width: 140px; /* 160px → 140px */
     height: auto;
     transition: transform var(--transition-normal);
 }
@@ -146,31 +147,34 @@ a:hover {
     transform: scale(1.02);
 }
 
+/* Menu : réduis l'espace entre les liens */
 .nav-menu {
     display: flex;
     list-style: none;
-    gap: var(--spacing-lg);
+    gap: var(--spacing-md); /* 3rem → 2rem */
     align-items: center;
 }
 
+/* Liens : plus compacts */
 .nav-menu a {
     color: var(--color-text);
     font-weight: 500;
-    font-size: var(--font-size-sm);
+    font-size: 0.9rem; /* 1rem → 0.9rem */
     position: relative;
-    padding: var(--spacing-xs) var(--spacing-sm);
-    transition: color var(--transition-fast);
+    padding: 0.5rem var(--spacing-sm); /* 0.5rem vertical */
+    transition: all var(--transition-fast);
 }
 
 .nav-menu a::after {
-    content: '';
-    position: absolute;
-    bottom: -4px;
-    left: 0;
-    width: 0;
-    height: 2px;
-    background-color: var(--color-primary);
-    transition: width var(--transition-normal);
+    display: none; /* On désactive l'ancien effet */
+}
+
+.nav-menu a:hover {
+    color: var(--color-primary);
+    background-color: rgba(0, 86, 179, 0.08); /* Fond bleu très léger */
+    box-shadow: 0 4px 8px rgba(0, 86, 179, 0.2); /* Ombre bleue subtile */
+    transform: translateY(-1px); /* Légère élévation */
+    border-radius: var(--border-radius-sm); /* Bords légèrement arrondis */
 }
 
 .nav-menu a:hover::after {
