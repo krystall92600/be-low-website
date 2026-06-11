@@ -427,7 +427,7 @@ a:hover {
 
 /* Footer */
 .footer {
-    background-color: var(--color-text);
+    background-color: var(--color-primary-dark);
     color: var(--color-bg);
     padding: var(--spacing-xl) 0 var(--spacing-md);
 }
