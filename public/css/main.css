@@ -203,11 +203,11 @@ a:hover {
 
 /* Main Content */
 .main {
-    padding: var(--spacing-xl) 0;
+    padding: 8rem 0;
 }
 
 .section {
-    padding: calc(var(--spacing-xxl) * 1.5) 0;
+    padding: 8rem 0;
 }
 
 .bg-light {
@@ -302,7 +302,7 @@ a:hover {
 
 .section-title {
     text-align: center;
-    margin-bottom: var(--spacing-lg);
+    margin-bottom: 4rem;
     position: relative;
 }
 
@@ -384,11 +384,13 @@ a:hover {
     display: flex;
     align-items: center;
     gap: var(--spacing-xxl);
+    flex-wrap: wrap;
 }
 
 .hero-text {
     flex: 1;
     max-width: 50%;
+    min-width: 300px;
 }
 
 .hero-text h1 {
@@ -407,6 +409,7 @@ a:hover {
 
 .hero-image {
     flex: 1;
+    min-width: 300px;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -506,6 +509,21 @@ a:hover {
         display: none; /* À remplacer par un menu hamburger */
     }
     
+    .hero-content {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .hero-text {
+        max-width: 100%;
+        margin-bottom: var(--spacing-xl);
+    }
+
+    .hero-image {
+        max-width: 100%;
+        margin-top: var(--spacing-lg);
+    }
+
     .hero h1 {
         font-size: var(--font-size-xl);
     }
