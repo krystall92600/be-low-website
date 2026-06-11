@@ -127,12 +127,19 @@ a:hover {
 
 /* Header */
 .header {
-    background-color: var(--color-bg);
-    padding: var(--spacing-md) 0;
+    background-color: rgba(255, 255, 255, 0.7);
+    backdrop-filter: blur(14px);
+    padding: 0.5rem 0;
     box-shadow: var(--shadow-sm);
     position: sticky;
     top: 0;
     z-index: 1000;
+    transition: all var(--transition-normal);
+}
+
+.header.scrolled {
+    background-color: rgba(255, 255, 255, 0.85);
+    backdrop-filter: blur(18px);
 }
 
 .nav {
@@ -240,6 +247,96 @@ a:hover {
     object-fit: cover;
     border-radius: var(--border-radius-md);
     margin-bottom: var(--spacing-md);
+    box-shadow: var(--shadow-md); /* Ombre plus visible */
+}
+
+/* Content Grid - Texte + Image */
+.content-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: var(--spacing-xxl);
+    align-items: center;
+    margin-top: var(--spacing-lg);
+}
+
+.content-grid.reverse {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: var(--spacing-xxl);
+    align-items: center;
+    margin-top: var(--spacing-lg);
+}
+
+.content-grid.reverse .content-text {
+    order: 2;
+    padding-left: var(--spacing-lg);
+    padding-right: 0;
+}
+
+.content-grid.reverse .content-image {
+    order: 1;
+}
+
+.content-text {
+    padding-right: var(--spacing-lg);
+}
+
+.content-image {
+    text-align: center;
+}
+
+.content-image img {
+    border-radius: var(--border-radius-md);
+    box-shadow: var(--shadow-md); /* Ombre plus visible sur les images */
+    max-width: 100%;
+    height: auto;
+}
+
+/* Recrutement Content */
+.recrutement-content {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: var(--spacing-xxl);
+    align-items: center;
+    margin-top: var(--spacing-lg);
+}
+
+.recrutement-content.reverse {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: var(--spacing-xxl);
+    align-items: center;
+    margin-top: var(--spacing-lg);
+}
+
+.recrutement-content.reverse .recrutement-text {
+    order: 2;
+    padding-left: var(--spacing-lg);
+}
+
+.recrutement-content.reverse .recrutement-image {
+    order: 1;
+}
+
+.recrutement-text {
+    padding-right: var(--spacing-lg);
+}
+
+.recrutement-buttons {
+    display: flex;
+    gap: var(--spacing-md);
+    margin-top: var(--spacing-lg);
+}
+
+.recrutement-image {
+    text-align: center;
+}
+
+.recrutement-image img {
+    border-radius: var(--border-radius-md);
+    box-shadow: var(--shadow-md);
+    max-width: 100%;
+    height: auto;
 }
 
 /* Hero Section - Page d'accueil */
@@ -330,7 +427,7 @@ a:hover {
 
 /* Footer */
 .footer {
-    background-color: var(--color-text);
+    background-color: #2a2a2a;
     color: var(--color-bg);
     padding: var(--spacing-xl) 0 var(--spacing-md);
 }
