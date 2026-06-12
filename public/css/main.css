@@ -476,6 +476,154 @@ a:hover {
     line-height: 1.8;
 }
 
+/* Hero Expertises - Page spécifique */
+.hero-expertises-content {
+    display: flex;
+    align-items: center;
+    gap: var(--spacing-xxl);
+    flex-wrap: wrap;
+    max-width: 1400px;
+    margin: 0 auto;
+}
+
+.hero-expertises-text {
+    flex: 1;
+    min-width: 350px;
+    text-align: left;
+}
+
+.hero-expertises-image {
+    flex: 1;
+    min-width: 350px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.expertises-main-title {
+    font-size: 5rem !important;
+    font-weight: 700 !important;
+    color: var(--color-primary) !important;
+    line-height: 0.9 !important;
+    margin-bottom: var(--spacing-lg) !important;
+    letter-spacing: -0.02em;
+}
+
+.expertises-description {
+    font-size: var(--font-size-md);
+    color: var(--color-text);
+    line-height: 1.8;
+    margin-bottom: 0;
+}
+
+.hero-expertises-img {
+    max-width: 100%;
+    height: auto;
+    border-radius: var(--border-radius-lg);
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15);
+    transition: transform 0.3s ease;
+}
+
+.hero-expertises-img:hover {
+    transform: scale(1.02);
+}
+
+/* Section Accompagnements - Grille des 4 services */
+.accompagnements-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: var(--spacing-xl);
+    margin-top: var(--spacing-lg);
+}
+
+.accompagnement-card {
+    background-color: var(--color-bg);
+    border-radius: var(--border-radius-lg);
+    padding: var(--spacing-lg);
+    box-shadow: var(--shadow-md);
+    transition: all var(--transition-normal);
+    display: flex;
+    gap: var(--spacing-md);
+    align-items: flex-start;
+}
+
+.accompagnement-card:hover {
+    transform: translateY(-5px);
+    box-shadow: var(--shadow-lg);
+}
+
+.accompagnement-icon {
+    flex: 0 0 80px;
+    min-width: 80px;
+}
+
+.accompagnement-icon img {
+    width: 100%;
+    height: auto;
+    border-radius: var(--border-radius-sm);
+    object-fit: cover;
+}
+
+.accompagnement-content {
+    flex: 1;
+}
+
+.accompagnement-content h3 {
+    font-size: var(--font-size-lg);
+    color: var(--color-primary);
+    margin-bottom: var(--spacing-sm);
+}
+
+.accompagnement-content p {
+    font-size: var(--font-size-sm);
+    color: var(--color-text-light);
+    margin-bottom: var(--spacing-md);
+    line-height: 1.6;
+}
+
+/* Section Header avec badge */
+.section-header {
+    text-align: center;
+    margin-bottom: var(--spacing-xl);
+}
+
+.section-badge {
+    display: inline-block;
+    background-color: #e6f2ff;
+    color: var(--color-primary);
+    padding: var(--spacing-xs) var(--spacing-md);
+    border-radius: var(--border-radius-md);
+    font-size: var(--font-size-xs);
+    font-weight: 600;
+    margin-bottom: var(--spacing-md);
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+}
+
+/* Expertise Content - Texte + Image */
+.expertise-content {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: var(--spacing-xxl);
+    align-items: center;
+    margin-top: var(--spacing-lg);
+}
+
+.expertise-text {
+    padding-right: var(--spacing-lg);
+}
+
+.expertise-visual {
+    text-align: center;
+}
+
+.expertise-visual img {
+    max-width: 100%;
+    height: auto;
+    border-radius: var(--border-radius-md);
+    box-shadow: var(--shadow-md);
+}
+
 /* Footer */
 .footer {
     background-color: #2a2a2a;
@@ -522,6 +670,7 @@ a:hover {
     text-align: center;
     padding: 1rem 0;
     border-top: 1px solid rgba(255, 255, 255, 0.1);
+    color: var(--color-bg);
 }
 
 .social-links {
@@ -570,6 +719,60 @@ a:hover {
     .section {
         padding: 4rem 0;
     }
+    
+    /* Hero Expertises */
+    .hero-expertises-content {
+        flex-direction: column;
+        text-align: center;
+    }
+    
+    .hero-expertises-text {
+        text-align: center;
+        margin-bottom: var(--spacing-lg);
+    }
+    
+    .expertises-main-title {
+        font-size: 3rem !important;
+        line-height: 1 !important;
+    }
+    
+    .expertises-description {
+        text-align: center;
+    }
+    
+    .hero-expertises-image {
+        margin-top: var(--spacing-lg);
+    }
+    
+    /* Accompagnements Grid */
+    .accompagnements-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .accompagnement-card {
+        flex-direction: column;
+        text-align: center;
+    }
+    
+    .accompagnement-icon {
+        margin: 0 auto var(--spacing-md);
+    }
+    
+    .expertise-content {
+        grid-template-columns: 1fr;
+        text-align: center;
+    }
+    
+    .expertise-text {
+        padding-right: 0;
+        text-align: center;
+        order: 2;
+    }
+    
+    .expertise-visual {
+        order: 1;
+        margin-bottom: var(--spacing-lg);
+    }
 }
 
 @media (max-width: 480px) {
@@ -580,6 +783,18 @@ a:hover {
     h1 { font-size: var(--font-size-lg); }
     h2 { font-size: var(--font-size-md); }
     h3 { font-size: var(--font-size-sm); }
+    
+    .expertises-main-title {
+        font-size: 2.2rem !important;
+    }
+    
+    .accompagnements-grid {
+        gap: var(--spacing-md);
+    }
+    
+    .accompagnement-card {
+        padding: var(--spacing-md);
+    }
 }
 
 /* Map Container */
@@ -598,6 +813,11 @@ a:hover {
 .recrutement-image,
 .map-container {
     text-align: center;
+}
+
+/* Espacement entre image et texte dans les grids */
+.content-image {
+    padding-right: var(--spacing-lg);
 }
 
 /* Utility Classes */
