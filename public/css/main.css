@@ -651,7 +651,6 @@ a:hover {
     max-width: 100%;
     height: auto;
     border-radius: var(--border-radius-md);
-    box-shadow: var(--shadow-md);
     transition: transform 0.3s ease;
 }
 
@@ -1041,3 +1040,37 @@ img:hover {
 .gap-2 { gap: var(--spacing-sm); }
 .gap-3 { gap: var(--spacing-md); }
 .gap-4 { gap: var(--spacing-lg); }
+
+/*
+ * =============================================
+ * OMBRES PORTÉES GLOBALES (remplace les box-shadow)
+ * =============================================
+ * Utilise filter: drop-shadow() pour des ombres alignées avec les contours des images,
+ * même avec des coins arrondis ou des formes irrégulières.
+ */
+.card-img,
+.expertise-visual img,
+.hero-expertises-img,
+.expert-img,
+.method-logo-img,
+img[class*="img"], /* Toutes les images avec une classe contenant "img" */
+img[class^="img"] {
+    transition: filter 0.3s ease;
+    filter: drop-shadow(0 4px 8px rgba(0, 0, 0, 0.1));
+}
+
+img[class*="img"]:hover,
+img[class^="img"]:hover,
+.card-img:hover,
+.expertise-visual img:hover,
+.hero-expertises-img:hover,
+.expert-img:hover,
+.method-logo-img:hover {
+    filter: drop-shadow(0 10px 20px rgba(0, 0, 0, 0.15));
+}
+
+/* Exceptions : images qui ne doivent pas avoir d'ombre */
+.map-image,
+.no-shadow {
+    filter: none !important;
+}
