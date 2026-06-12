@@ -219,12 +219,12 @@ a:hover {
 .btn-secondary {
     background-color: transparent;
     color: var(--color-primary);
-    border: 2px solid var(--color-primary);
+    border: 2px solid #cce7ff;
 }
 
 .btn-secondary:hover {
-    background-color: var(--color-primary);
-    color: var(--color-bg);
+    background-color: #e6f2ff;
+    color: var(--color-primary);
 }
 
 /* Cards */
@@ -619,7 +619,6 @@ a:hover {
     max-width: 80%;
     height: auto;
     border-radius: var(--border-radius-md);
-    box-shadow: var(--shadow-md);
 }
 
 /* Utility Classes */
