@@ -201,44 +201,53 @@ a:hover {
     display: flex;
     list-style: none;
     gap: var(--spacing-lg);
-    justify-content: center; /* Centre les éléments horizontalement */
-    align-items: center; /* Centre verticalement si besoin */
+    justify-content: center;
+    align-items: center;
     margin: 0;
     padding: 0;
-    width: 100%; /* Prend toute la largeur disponible */
+    width: 100%;
+    overflow-x: auto; /* Permet le défilement horizontal si nécessaire */
+    white-space: nowrap; /* Force tout sur une seule ligne */
+    -webkit-overflow-scrolling: touch; /* Pour un défilement fluide sur mobile */
+}
+
+.nav-menu li {
+    flex-shrink: 0; /* Empêche les éléments de rétrécir */
+    min-width: 0; /* Permet aux éléments de rétrécir si nécessaire */
 }
 
 .nav-menu a {
     color: var(--color-text);
     font-weight: 500;
-    padding: 12px 16px; /* Padding légèrement plus grand pour équilibrer */
+    padding: 12px 16px;
     border-radius: 6px;
     transition: all var(--transition-normal) ease;
-    text-decoration: none; /* Supprime TOUS les soulignements */
-    display: inline-flex; /* Assure que tout reste sur une ligne */
-    align-items: center; /* Centre verticalement si besoin */
+    text-decoration: none;
+    display: inline-flex;
+    align-items: center;
+    white-space: nowrap; /* Force le texte à ne pas se couper */
+    min-width: max-content; /* Empêche le texte de se réduire */
 }
 
-/* Effet moderne au survol - UNIFORME pour tous les liens */
+/* Effet moderne au survol */
 .nav-menu a:hover {
-    background-color: rgba(153, 74, 73, 0.1); /* Rouge Be-low très léger */
-    color: var(--color-primary); /* Texte rouge au survol */
-    transform: translateY(-2px); /* Effet de "lift" */
+    background-color: rgba(153, 74, 73, 0.1);
+    color: var(--color-primary);
+    transform: translateY(-2px);
 }
 
 /* Style spécifique pour le bouton Contact */
 .nav-menu .contact-btn {
-    background-color: #994a49; /* Fond rouge Be-low */
-    color: white !important; /* Texte blanc pour contraste */
-    padding: 12px 20px; /* Padding plus large pour le bouton */
-    border-radius: 8px; /* Coin légèrement plus arrondi */
+    background-color: #994a49;
+    color: white !important;
+    padding: 12px 20px;
+    border-radius: 8px;
 }
 
-/* Effet au survol pour le bouton Contact */
 .nav-menu .contact-btn:hover {
-    background-color: #8a3f3f; /* Rouge plus foncé au survol */
-    box-shadow: 0 4px 8px rgba(153, 74, 73, 0.3); /* Ombre portée subtile */
-    transform: translateY(-2px) scale(1.02); /* Effet de "lift" + légère mise à l'échelle */
+    background-color: #8a3f3f;
+    box-shadow: 0 4px 8px rgba(153, 74, 73, 0.3);
+    transform: translateY(-2px) scale(1.02);
 }
 
 /* Main Content */
