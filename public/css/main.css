@@ -207,21 +207,34 @@ a:hover {
     color: var(--color-text);
     font-weight: 500;
     position: relative;
+    padding: 8px 12px;
+    border-radius: 6px;
+    transition: all var(--transition-normal) ease;
 }
 
 .nav-menu a::after {
     content: '';
     position: absolute;
     bottom: -4px;
-    left: 0;
+    left: 50%;
+    transform: translateX(-50%);
     width: 0;
     height: 2px;
-    background-color: var(--color-primary);
-    transition: width var(--transition-normal);
+    background-color: transparent; /* ← Modifié : transparent par défaut */
+    transition: all var(--transition-normal) ease;
+    z-index: 1;
+}
+
+.nav-menu a:hover {
+    background-color: rgba(255, 255, 255, 0.1); /* Fond blanc très léger */
+    color: var(--color-primary); /* Texte rouge au survol */
+    transform: translateY(-2px); /* Effet de "lift" */
 }
 
 .nav-menu a:hover::after {
-    width: 100%;
+    width: 80%; /* Barre qui s'étend au survol */
+    background-color: var(--color-primary); /* Couleur de la barre */
+    left: 10%; /* Position centrée avec marge */
 }
 
 /* Main Content */
