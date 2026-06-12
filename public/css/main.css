@@ -612,6 +612,14 @@ a:hover {
     margin-top: var(--spacing-lg);
 }
 
+#strategie-decarbonation .expertise-content {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: var(--spacing-xl);
+  align-items: center;
+  text-align: left;
+}
+
 .expertise-text {
     padding-right: var(--spacing-lg);
 }
@@ -698,7 +706,7 @@ img:hover {
 
 /* Espacement pour décarbonation */
 .expertise-content.spaced {
-    gap: var(--spacing-xxl);
+    gap: 8rem;
 }
 
 .expert-info {
@@ -926,6 +934,7 @@ img:hover {
     
     .expertise-content.spaced {
         flex-direction: column;
+        gap: 4rem;
     }
     
     .expertise-text-full {
