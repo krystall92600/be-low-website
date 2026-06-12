@@ -242,6 +242,7 @@ a:hover {
     position: relative;
     overflow: hidden;
     border-radius: 20px;
+    color: var(--color-bg);
 }
 
 .card-physiques {
@@ -281,25 +282,17 @@ a:hover {
     border-radius: 20px;
 }
 
-/* Contenu au-dessus de tout */
+/* Contenu au-dessus de tout + texte */
 .card-physiques > *,
-.card-transition > * {
-    position: relative;
-    z-index: 1;
-}
-
-/* Couleur du texte sur les cartes avec image */
-.card-physiques,
-.card-transition {
-    color: var(--color-bg);
-}
-
+.card-transition > *,
 .card-physiques h3,
 .card-transition h3,
 .card-physiques p,
 .card-transition p,
 .card-physiques a,
 .card-transition a {
+    position: relative;
+    z-index: 1;
     color: var(--color-bg);
     text-shadow: 0 2px 8px rgba(0, 0, 0, 0.7);
 }
@@ -309,66 +302,42 @@ a:hover {
     box-shadow: 0 12px 32px rgba(0, 0, 0, 0.22);
 }
 
-.card-img {
+.card-img,
+.content-image img,
+.recrutement-image img,
+.map-image {
     width: 100%;
+    height: auto;
+    border-radius: var(--border-radius-md);
+    box-shadow: var(--shadow-md);
+    max-width: 100%;
+}
+
+.card-img {
     height: 200px;
     object-fit: cover;
-    border-radius: var(--border-radius-md);
     margin-bottom: var(--spacing-md);
-    box-shadow: var(--shadow-md); /* Ombre plus visible */
+}
+
+.map-image {
+    max-width: 80%;
 }
 
 /* Cards Grid - Pour les risques */
+.cards-grid,
+.content-grid,
+.recrutement-content {
+    margin-top: var(--spacing-lg);
+}
+
 .cards-grid {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     gap: var(--spacing-xl); /* Espace entre les deux cartes */
-    margin-top: var(--spacing-lg);
 }
 
 /* Content Grid - Texte + Image */
-.content-grid {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: var(--spacing-xxl);
-    align-items: center;
-    margin-top: var(--spacing-lg);
-}
-
-.content-grid.reverse {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: var(--spacing-xxl);
-    align-items: center;
-    margin-top: var(--spacing-lg);
-}
-
-.content-grid.reverse .content-text {
-    order: 2;
-    padding-left: var(--spacing-lg);
-    padding-right: 0;
-}
-
-.content-grid.reverse .content-image {
-    order: 1;
-}
-
-.content-text {
-    padding-right: var(--spacing-lg);
-}
-
-.content-image {
-    text-align: center;
-}
-
-.content-image img {
-    border-radius: var(--border-radius-md);
-    box-shadow: var(--shadow-md); /* Ombre plus visible sur les images */
-    max-width: 100%;
-    height: auto;
-}
-
-/* Recrutement Content */
+.content-grid,
 .recrutement-content {
     display: grid;
     grid-template-columns: 1fr 1fr;
@@ -377,13 +346,32 @@ a:hover {
     margin-top: var(--spacing-lg);
 }
 
-.recrutement-content.reverse {
+/* Grids avec ordre inversé */
+.content-grid.reverse .content-text,
+.recrutement-content.reverse .recrutement-text {
+    order: 2;
+    padding-left: var(--spacing-lg);
+    padding-right: 0;
+}
+
+.content-grid.reverse .content-image,
+.recrutement-content.reverse .recrutement-image {
+    order: 1;
+}
+
+.content-text {
+    padding-right: var(--spacing-lg);
+}
+
+/* Recrutement Content */
+.recrutement-content {
     display: grid;
     grid-template-columns: 1fr 1fr;
     gap: var(--spacing-xxl);
     align-items: center;
-    margin-top: var(--spacing-lg);
 }
+
+
 
 .recrutement-content.reverse .recrutement-text {
     order: 2;
@@ -394,25 +382,10 @@ a:hover {
     order: 1;
 }
 
-.recrutement-text {
-    padding-right: var(--spacing-lg);
-}
-
 .recrutement-buttons {
     display: flex;
     gap: var(--spacing-md);
     margin-top: var(--spacing-lg);
-}
-
-.recrutement-image {
-    text-align: center;
-}
-
-.recrutement-image img {
-    border-radius: var(--border-radius-md);
-    box-shadow: var(--shadow-md);
-    max-width: 100%;
-    height: auto;
 }
 
 /* Hero Section - Page d'accueil */
@@ -611,7 +584,6 @@ a:hover {
 
 /* Map Container */
 .map-container {
-    text-align: center;
     margin-top: var(--spacing-lg);
 }
 
@@ -619,6 +591,13 @@ a:hover {
     max-width: 80%;
     height: auto;
     border-radius: var(--border-radius-md);
+}
+
+/* Éléments centrés */
+.content-image,
+.recrutement-image,
+.map-container {
+    text-align: center;
 }
 
 /* Utility Classes */
