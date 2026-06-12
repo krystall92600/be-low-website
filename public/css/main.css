@@ -267,7 +267,7 @@ a:hover {
     transform: scale(1.05);
 }
 
-/* Overlay transparent pour la lisibilité */
+/* Overlay gris foncé pour la lisibilité */
 .card-physiques::after,
 .card-transition::after {
     content: '';
@@ -276,7 +276,7 @@ a:hover {
     left: 0;
     right: 0;
     bottom: 0;
-    background: rgba(255, 255, 255, 0.65);
+    background: rgba(30, 30, 30, 0.7);
     z-index: 0;
     border-radius: 20px;
 }
@@ -607,6 +607,19 @@ a:hover {
     h1 { font-size: var(--font-size-lg); }
     h2 { font-size: var(--font-size-md); }
     h3 { font-size: var(--font-size-sm); }
+}
+
+/* Map Container */
+.map-container {
+    text-align: center;
+    margin-top: var(--spacing-lg);
+}
+
+.map-image {
+    max-width: 80%;
+    height: auto;
+    border-radius: var(--border-radius-md);
+    box-shadow: var(--shadow-md);
 }
 
 /* Utility Classes */
