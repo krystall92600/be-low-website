@@ -665,6 +665,39 @@ img:hover {
     flex-shrink: 0;
 }
 
+/* Conférence - Pleine largeur */
+.expertise-text-full {
+    max-width: 100%;
+    padding: 0;
+}
+
+.experts-grid-full {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: var(--spacing-xl);
+    margin-top: var(--spacing-xl);
+}
+
+.expert-profile-full {
+    display: flex;
+    align-items: flex-start;
+    gap: var(--spacing-lg);
+}
+
+.expert-img-full {
+    width: 120px;
+    height: 120px;
+    object-fit: cover;
+    flex-shrink: 0;
+    border-radius: var(--border-radius-md);
+    box-shadow: var(--shadow-md);
+}
+
+/* Espacement pour décarbonation */
+.expertise-content.spaced {
+    gap: var(--spacing-xxl);
+}
+
 .expert-info {
     flex: 1;
 }
@@ -869,6 +902,30 @@ img:hover {
     }
     
     .method-logo {
+        text-align: center;
+    }
+    
+    /* Conférence pleine largeur */
+    .experts-grid-full {
+        grid-template-columns: 1fr;
+    }
+    
+    .expert-profile-full {
+        flex-direction: column;
+        text-align: center;
+    }
+    
+    .expert-img-full {
+        width: 150px;
+        height: 150px;
+        margin: 0 auto var(--spacing-sm);
+    }
+    
+    .expertise-content.spaced {
+        flex-direction: column;
+    }
+    
+    .expertise-text-full {
         text-align: center;
     }
 }
