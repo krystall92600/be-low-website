@@ -634,6 +634,11 @@ a:hover {
     text-align: center;
 }
 
+#strategie-decarbonation .expertise-visual:hover {
+  transform: translateY(-5px);
+  box-shadow: var(--shadow-lg);
+}
+
 .expertise-visual.reverse {
     order: 1;
 }
@@ -940,7 +945,24 @@ img:hover {
     .expertise-text-full {
         text-align: center;
     }
+    /* Responsive : passe en colonne sur mobile */
+    #strategie-decarbonation .expertise-content {
+        grid-template-columns: 1fr;
+        gap: var(--spacing-lg);
+    }
+
+    #strategie-decarbonation .expertise-visual,
+    #strategie-decarbonation .expertise-text {
+        order: 1; /* Tout en colonne */
+        text-align: center;
+        padding-left: 0;
+    }
+
+    #strategie-decarbonation .expertise-text {
+        margin-top: var(--spacing-md);
+    }
 }
+
 
 @media (max-width: 480px) {
     .container {
