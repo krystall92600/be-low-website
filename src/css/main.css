@@ -236,6 +236,75 @@ a:hover {
     transition: transform var(--transition-normal), box-shadow var(--transition-normal);
 }
 
+/* Cartes avec fond image et blur */
+.card-physiques {
+    background: url('../assets/images/illustrations/risques-physiques.png') center/cover;
+    position: relative;
+    overflow: hidden;
+}
+
+.card-physiques::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: inherit;
+    filter: blur(10px) saturate(1.2);
+    z-index: -1;
+    transform: scale(1.1);
+}
+
+.card-transition {
+    background: url('../assets/images/illustrations/risques-transition.png') center/cover;
+    position: relative;
+    overflow: hidden;
+}
+
+.card-transition::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: inherit;
+    filter: blur(10px) saturate(1.2);
+    z-index: -1;
+    transform: scale(1.1);
+}
+
+/* Overlay blanc pour la lisibilité */
+.card-physiques::after,
+.card-transition::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(255, 255, 255, 0.85);
+    z-index: -1;
+    border-radius: 20px;
+}
+
+/* Couleur du texte sur les cartes avec image */
+.card-physiques,
+.card-transition {
+    color: var(--color-bg);
+}
+
+.card-physiques h3,
+.card-transition h3,
+.card-physiques p,
+.card-transition p,
+.card-physiques a,
+.card-transition a {
+    color: var(--color-bg);
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
+}
+
 .card:hover {
     transform: translateY(-5px);
     box-shadow: 0 12px 32px rgba(0, 0, 0, 0.22);
