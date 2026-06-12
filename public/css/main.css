@@ -613,15 +613,86 @@ a:hover {
     padding-right: var(--spacing-lg);
 }
 
+.expertise-text.reverse {
+    order: 2;
+    padding-right: 0;
+    padding-left: var(--spacing-lg);
+}
+
 .expertise-visual {
     text-align: center;
 }
 
-.expertise-visual img {
+.expertise-visual.reverse {
+    order: 1;
+}
+
+.expertise-visual img,
+.card-img,
+.hero-expertises-img,
+.expert-img,
+.method-logo-img {
     max-width: 100%;
     height: auto;
     border-radius: var(--border-radius-md);
     box-shadow: var(--shadow-md);
+    transition: transform 0.3s ease;
+}
+
+/* Effet de zoom pour toutes les images au survol */
+img:hover {
+    transform: scale(1.02);
+}
+
+/* Grille des experts pour la section Conférence */
+.experts-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: var(--spacing-lg);
+    margin-top: var(--spacing-lg);
+}
+
+.expert-profile {
+    display: flex;
+    align-items: flex-start;
+    gap: var(--spacing-md);
+}
+
+.expert-img {
+    width: 80px;
+    height: 80px;
+    object-fit: cover;
+    flex-shrink: 0;
+}
+
+.expert-info {
+    flex: 1;
+}
+
+.expert-info h4 {
+    font-size: var(--font-size-sm);
+    color: var(--color-primary);
+    margin-bottom: 0.25rem;
+}
+
+.expert-title,
+.expert-company {
+    font-size: var(--font-size-xs);
+    color: var(--color-text-light);
+    margin: 0;
+    line-height: 1.4;
+}
+
+/* Logo des méthodes (OCARA, Diag Décarbo) */
+.method-logo {
+    margin-top: var(--spacing-lg);
+    text-align: left;
+}
+
+.method-logo-img {
+    max-width: 150px;
+    height: auto;
+    display: inline-block;
 }
 
 /* Footer */
@@ -763,15 +834,42 @@ a:hover {
         text-align: center;
     }
     
-    .expertise-text {
+    .expertise-text,
+    .expertise-text.reverse {
         padding-right: 0;
+        padding-left: 0;
         text-align: center;
-        order: 2;
+        order: 1;
     }
     
-    .expertise-visual {
-        order: 1;
+    .expertise-visual,
+    .expertise-visual.reverse {
+        order: 2;
         margin-bottom: var(--spacing-lg);
+    }
+    
+    /* Experts Grid */
+    .experts-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .expert-profile {
+        flex-direction: column;
+        text-align: center;
+    }
+    
+    .expert-img {
+        width: 100px;
+        height: 100px;
+        margin: 0 auto var(--spacing-sm);
+    }
+    
+    .expert-info {
+        text-align: center;
+    }
+    
+    .method-logo {
+        text-align: center;
     }
 }
 
@@ -794,6 +892,28 @@ a:hover {
     
     .accompagnement-card {
         padding: var(--spacing-md);
+    }
+    
+    /* Experts Grid */
+    .experts-grid {
+        gap: var(--spacing-md);
+    }
+    
+    .expert-profile {
+        gap: var(--spacing-sm);
+    }
+    
+    .expert-img {
+        width: 70px;
+        height: 70px;
+    }
+    
+    .expert-info h4 {
+        font-size: var(--font-size-xs);
+    }
+    
+    .method-logo-img {
+        max-width: 120px;
     }
 }
 

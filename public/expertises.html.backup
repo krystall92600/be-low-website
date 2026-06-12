@@ -8,17 +8,23 @@
     
     <title>Nos Expertises - Be-low</title>
     
+    <!-- Favicon -->
     <link rel="icon" type="image/x-icon" href="/favicon.ico">
     
+    <!-- Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
     
+    <!-- CSS -->
     <link rel="stylesheet" href="/css/main.css">
+    
+    <!-- Preload -->
     <link rel="preload" href="/css/main.css" as="style">
     <link rel="preload" href="/js/main.js" as="script">
 </head>
 <body>
+    <!-- Header -->
     <header class="header">
         <div class="container">
             <nav class="nav">
@@ -41,6 +47,7 @@
         </div>
     </header>
 
+    <!-- Hero Page -->
     <section class="page-hero animate-on-scroll">
         <div class="container">
             <div class="hero-expertises-content">
@@ -56,14 +63,16 @@
         </div>
     </section>
 
+    <!-- Main Content -->
     <main class="main">
         
+        <!-- Section: Nos 4 grands accompagnements -->
         <section id="accompagnements" class="section bg-light animate-on-scroll">
             <div class="container">
                 <div class="accompagnements-grid">
                     <article class="accompagnement-card animate-on-scroll">
                         <div class="accompagnement-icon">
-                            <img src="/assets/images/illustrations/maxime-efoui-hess-conférences.png" alt="Conférence" loading="lazy">
+                            <img src="/assets/images/illustrations/maxime-efoui-hess-confeerences.png" alt="Conférence" loading="lazy">
                         </div>
                         <div class="accompagnement-content">
                             <h3>Conférence</h3>
@@ -105,6 +114,7 @@
             </div>
         </section>
 
+        <!-- Section: Conférence -->
         <section id="conference" class="section animate-on-scroll">
             <div class="container">
                 <div class="section-header">
@@ -113,48 +123,18 @@
                 </div>
                 <div class="expertise-content">
                     <div class="expertise-text">
-                        <p class="lead">La sensibilisation est une étape cruciale pour mobiliser une organisation.</p>
-                        <p>Pour y parvenir, nous collaborons avec plusieurs experts, notamment des scientifiques et des ingénieurs. Leur double objectif est d'aligner les directions générales et les opérationnels sur les enjeux climatiques, tout en leur permettant de mieux comprendre l'impact des organisations sur le climat et l'environnement.</p>
-                        
-                        <div class="experts-grid">
-                            <div class="expert-profile">
-                                <img src="/assets/images/illustrations/maxime-conferencier.png" alt="Maxime Efoui-Hess" class="expert-img" loading="lazy">
-                                <div class="expert-info">
-                                    <h4>Maxime Efoui-Hess</h4>
-                                    <p class="expert-title">Coordinateur de programme</p>
-                                    <p class="expert-company">The Shift Project</p>
-                                </div>
-                            </div>
-                            <div class="expert-profile">
-                                <img src="/assets/images/illustrations/serge-conferencier.png" alt="Serge Zaka" class="expert-img" loading="lazy">
-                                <div class="expert-info">
-                                    <h4>Serge Zaka</h4>
-                                    <p class="expert-title">Agro climatologue</p>
-                                </div>
-                            </div>
-                            <div class="expert-profile">
-                                <img src="/assets/images/illustrations/arthur-conferencier.png" alt="Arthur Keller" class="expert-img" loading="lazy">
-                                <div class="expert-info">
-                                    <h4>Arthur Keller</h4>
-                                    <p class="expert-title">Ingénieur en systémique et stratégies de résilience</p>
-                                </div>
-                            </div>
-                            <div class="expert-profile">
-                                <img src="/assets/images/illustrations/saskia-conferenciere.png" alt="Saskia Gindraux" class="expert-img" loading="lazy">
-                                <div class="expert-info">
-                                    <h4>Saskia Gindraux</h4>
-                                    <p class="expert-title">Glaciologue</p>
-                                </div>
-                            </div>
-                        </div>
+                        <p class="lead">Sensibilisez vos équipes aux enjeux climatiques</p>
+                        <p>Nous organisons des conférences et ateliers pour éduquer et mobiliser vos collaborateurs sur les sujets de résilience climatique et d'adaptation.</p>
+                        <p></div></p>
                     </div>
                     <div class="expertise-visual">
-                        <img src="/assets/images/illustrations/maxime-efoui-hess-conférences.png" alt="Conférence Be-low" class="card-img" loading="lazy">
+                        <img src="/assets/images/illustrations/maxime-efoui-hess-confeerences.png" alt="Conférence Be-low" class="card-img" loading="lazy">
                     </div>
                 </div>
             </div>
         </section>
 
+        <!-- Section: Stratégie D'Adaptation -->
         <section id="strategie-adaptation" class="section bg-light animate-on-scroll">
             <div class="container">
                 <div class="section-header">
@@ -162,25 +142,19 @@
                     <h2 class="section-title">Stratégie D'Adaptation</h2>
                 </div>
                 <div class="expertise-content">
-                    <div class="expertise-text">
-                        <p class="lead">La dérive climatique au-delà de +2°C aura des conséquences majeures sur les entreprises, perturbant la production, les infrastructures et les chaînes d'approvisionnement.</p>
-                        <p>Anticiper ces changements, qu'ils soient graduels ou soudains, est crucial pour développer une stratégie de résilience à moyen et long terme.</p>
-                        <p>L'analyse par scénario, recommandée par la "Task Force on Climate-related Financial Disclosures" (TCFD), est un outil puissant pour orienter la réflexion stratégique des entreprises et anticiper les risques et opportunités liés au changement climatique.</p>
-                        <p>L'analyse par processus, que l'on retrouve notamment au travers de la méthode OCARA offre également un socle méthodologique sérieux pour aborder l'analyse de risques climatiques et aborder ensuite la Résilience stratégique.</p>
-                        <p>Grâce à ces outils, nous accompagnons les directions générales ou les directions stratégiques vers la compréhension des enjeux, qu'ils soient physiques ou de transition, afin d'interroger la stratégie de l'entreprise et la faire évoluer en intégrant ces enjeux.</p>
-                        <p>Cela permet à l'entreprise de s'adapter à la dérive climatique et de mieux faire face aux aléas climatiques extrêmes et aux évolutions réglementaires telles que la CSRD ou aux exigences des appels d'offres publiques.</p>
-                        
-                        <div class="method-logo">
-                            <img src="/assets/images/illustrations/logo-methode-ocara.png" alt="Méthode OCARA" class="method-logo-img" loading="lazy">
-                        </div>
-                    </div>
                     <div class="expertise-visual">
-                        <img src="/assets/images/illustrations/details-strategie-adaptation.png" alt="Stratégie d'Adaptation" class="card-img" loading="lazy">
+                        <img src="/assets/images/illustrations/photo-strategie-adaptation.png" alt="Stratégie d'Adaptation" class="card-img" loading="lazy">
+                    </div>
+                    <div class="expertise-text">
+                        <p class="lead">Adaptez votre organisation aux aléas climatiques</p>
+                        <p>Nous vous aidons à développer et mettre en œuvre des stratégies d'adaptation pour faire face aux risques climatiques physiques (inondations, canicules, sécheresses, etc.).</p>
+                        <p>Notre approche combine analyse des vulnérabilités, identification des opportunités et planification des actions concrètes.</p>
                     </div>
                 </div>
             </div>
         </section>
 
+        <!-- Section: Stratégie de décarbonation -->
         <section id="strategie-decarbonation" class="section animate-on-scroll">
             <div class="container">
                 <div class="section-header">
@@ -188,21 +162,19 @@
                     <h2 class="section-title">Stratégie de décarbonation</h2>
                 </div>
                 <div class="expertise-content">
-                    <div class="expertise-visual">
-                        <img src="/assets/images/illustrations/detail-strategie-decarbonation.png" alt="Stratégie de décarbonation" class="card-img" loading="lazy">
-                    </div>
                     <div class="expertise-text">
-                        <p class="lead">Nous accompagnons les entreprises et les institutions qui s'engagent dans une contribution à la neutralité carbone planétaire.</p>
-                        <p>Du calcul de leur empreinte carbone en respectant les meilleurs standards (GHG Protocol, ISO 14064, Bilan Carbone®), nous les accompagnons dans le calcul de trajectoires de réduction compatibles avec les sciences du climat pour aligner leur ambition avec l'Accord de Paris.</p>
-                        <p>Enfin, nous les aidons à construire des plans d'action de réduction adaptés au contexte de l'activité.</p>
-                        <p>Pour les entreprises de plus de 250 salariés qui ont déjà réalisé un Bilan Carbone, il est très souvent possible de bénéficier de subvention publique via le Programme Volontaire Français pour la réalisation d'une méthode d'élaboration de stratégie climat appelé ACT pas à pas.</p>
-                        <p>Point central de nos missions, nous proposons également à nos clients de les accompagner dans la mise en œuvre de leurs plans d'actions de décarbonation, en travaillant main dans la main avec les porteurs des leviers d'actions en interne dans l'entreprise, en leur apportant nos expertises mais également notre réseau.</p>
-                        <p>Cette démarche permet d'offrir un alignement de l'entreprise avec les exigences réglementaires de la CSRD (Corporate Sustainability Reporting Directive) et de communiquer sereinement et efficacement sur l'impact de l'entreprise et les efforts que l'activité compte mettre en œuvre.</p>
+                        <p class="lead">Réduisez vos émissions de CO₂ de manière stratégique</p>
+                        <p>Nous accompagnons les organisations dans la définition et la mise en œuvre de stratégies de décarbonation ambitieuses et réalistes.</p>
+                        <p>De l'analyse de votre empreinte carbone actuelle à l'identification des leviers de réduction, nous vous guidons vers une économie bas-carbone.</p>
+                    </div>
+                    <div class="expertise-visual">
+                        <img src="/assets/images/illustrations/photo-strategie-decarbonation.png" alt="Stratégie de décarbonation" class="card-img" loading="lazy">
                     </div>
                 </div>
             </div>
         </section>
 
+        <!-- Section: Empreinte carbone -->
         <section id="empreinte-carbone" class="section bg-light animate-on-scroll">
             <div class="container">
                 <div class="section-header">
@@ -210,24 +182,19 @@
                     <h2 class="section-title">Empreinte carbone</h2>
                 </div>
                 <div class="expertise-content">
-                    <div class="expertise-text">
-                        <p class="lead">Mesurer les émissions directe et indirecte d'une entreprise est aujourd'hui un incontournable.</p>
-                        <p>Il s'agit de la première brique nécessaire à la compréhension des enjeux et des impacts de l'organisation sur le climat.</p>
-                        <p>Le Bilan Carbone® est le standard utilisé, cette méthodologie est rigoureuse et permet d'offrir une base solide à toute stratégie climat, si elle est réalisé avec sérieux et savoir-faire.</p>
-                        <p>Sur 2025, toutes les entreprises privées de plus de 500 salariés (et publiques de plus de 250 salariés) ont l'obligation de réaliser une mesure d'empreinte carbone complète.</p>
-                        <p>Les activités de taille inférieure peuvent bénéficier, dans la plupart des cas, de subvention dont la plus connue, le Diag Décarbon'action, un programme de financement portée par la BPI et l'ADEME.</p>
-                        
-                        <div class="method-logo">
-                            <img src="/assets/images/illustrations/diag-decarbo.png" alt="Diag Décarbon'action" class="method-logo-img" loading="lazy">
-                        </div>
-                    </div>
                     <div class="expertise-visual">
-                        <img src="/assets/images/illustrations/details-empreinte-carbone.png" alt="Empreinte carbone" class="card-img" loading="lazy">
+                        <img src="/assets/images/illustrations/photo-empreinte-carbone.png" alt="Empreinte carbone" class="card-img" loading="lazy">
+                    </div>
+                    <div class="expertise-text">
+                        <p class="lead">Mesurez et maîtrisez votre impact carbone</p>
+                        <p>Nous réalisons des bilans carbone complets pour vos organisations, produits ou services.</p>
+                        <p>Nos méthodologies permettent d'identifier précisément vos sources d'émissions et de prioriser les actions de réduction les plus efficaces.</p>
                     </div>
                 </div>
             </div>
         </section>
 
+        <!-- Section: Risques Physiques -->
         <section id="physiques" class="section animate-on-scroll">
             <div class="container">
                 <div class="section-header">
@@ -273,6 +240,7 @@
             </div>
         </section>
 
+        <!-- Section: Risques de Transition -->
         <section id="transition" class="section bg-light animate-on-scroll">
             <div class="container">
                 <div class="section-header">
@@ -311,6 +279,7 @@
             </div>
         </section>
 
+        <!-- Section: Méthodologie -->
         <section id="methodologie" class="section animate-on-scroll">
             <div class="container">
                 <h2 class="section-title">Notre Méthodologie</h2>
@@ -344,6 +313,7 @@
             </div>
         </section>
 
+        <!-- Section: Secteurs d'interventions -->
         <section id="secteurs" class="section bg-light animate-on-scroll">
             <div class="container">
                 <h2 class="section-title">Nos Secteurs d'Intervention</h2>
@@ -382,6 +352,7 @@
             </div>
         </section>
 
+        <!-- Section: Outils et Méthodes -->
         <section id="outils" class="section animate-on-scroll">
             <div class="container">
                 <h2 class="section-title">Nos Outils et Méthodes</h2>
@@ -411,6 +382,7 @@
             </div>
         </section>
 
+        <!-- CTA Section -->
         <section id="cta" class="section cta-section animate-on-scroll">
             <div class="container">
                 <div class="cta-content">
@@ -426,6 +398,7 @@
 
     </main>
 
+    <!-- Footer -->
     <footer class="footer">
         <div class="container">
             <div class="footer-content">
@@ -474,6 +447,7 @@
         </div>
     </footer>
 
+    <!-- JavaScript -->
     <script src="/js/main.js" defer></script>
 </body>
 </html>
