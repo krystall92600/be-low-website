@@ -1066,7 +1066,7 @@ img[class^="img"]:hover,
 .hero-expertises-img:hover,
 .expert-img:hover,
 .method-logo-img:hover {
-    filter: drop-shadow(0 10px 20px rgba(0, 0, 0, 0.15));
+    filter: drop-shadow(0 12px 24px rgba(0, 0, 0, 0.18));
 }
 
 /* Exceptions : images qui ne doivent pas avoir d'ombre */
