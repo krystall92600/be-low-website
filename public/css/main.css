@@ -188,34 +188,46 @@ a:hover {
 
 .nav {
     display: flex;
-    justify-content: space-between;
+    justify-content: space-between; /* Garde le logo à gauche et le menu à droite */
     align-items: center;
+    width: 100%;
+    padding: 1rem 2rem; /* Espacement latéral pour éviter le collage aux bords */
+    box-sizing: border-box;
 }
 
+/* Logo - reste fixe à gauche */
 .logo {
     max-width: 180px;
     height: auto;
+    flex-shrink: 0; /* Empêche le logo de rétrécir */
 }
 
+/* Conteneur pour le menu de navigation */
+.nav-menu-container {
+    flex-grow: 1; /* Prend tout l'espace disponible */
+    overflow-x: auto; /* Défilement horizontal si nécessaire */
+    scrollbar-width: none; /* Masque la barre de défilement sur Firefox */
+    -ms-overflow-style: none; /* Masque la barre de défilement sur IE/Edge */
+    margin: 0 1rem; /* Espacement entre le logo et le menu */
+}
+
+.nav-menu-container::-webkit-scrollbar {
+    display: none; /* Masque la barre de défilement sur Chrome/Safari */
+}
+
+/* Liste des liens - centrée dans son conteneur */
 .nav-menu {
     display: flex;
     list-style: none;
     gap: var(--spacing-lg);
-    justify-content: center;
+    justify-content: center; /* Centre les éléments dans le conteneur */
     align-items: center;
     margin: 0;
     padding: 0;
-    width: 100%;
-    overflow-x: auto; /* Permet le défilement horizontal si nécessaire */
     white-space: nowrap; /* Force tout sur une seule ligne */
-    -webkit-overflow-scrolling: touch; /* Pour un défilement fluide sur mobile */
 }
 
-.nav-menu li {
-    flex-shrink: 0; /* Empêche les éléments de rétrécir */
-    min-width: 0; /* Permet aux éléments de rétrécir si nécessaire */
-}
-
+/* Style de base pour tous les liens */
 .nav-menu a {
     color: var(--color-text);
     font-weight: 500;
@@ -225,15 +237,22 @@ a:hover {
     text-decoration: none;
     display: inline-flex;
     align-items: center;
-    white-space: nowrap; /* Force le texte à ne pas se couper */
-    min-width: max-content; /* Empêche le texte de se réduire */
+    white-space: nowrap; /* Empêche le texte de se couper */
+    flex-shrink: 0; /* Empêche les éléments de rétrécir */
 }
 
-/* Effet moderne au survol */
+/* Effet au survol (pour tous les liens) */
 .nav-menu a:hover {
     background-color: rgba(153, 74, 73, 0.1);
     color: var(--color-primary);
     transform: translateY(-2px);
+}
+
+/* Style spécifique pour le lien actif (page courante) */
+.nav-menu a[aria-current="page"] {
+    background-color: rgba(153, 74, 73, 0.2);
+    color: var(--color-primary);
+    font-weight: 600;
 }
 
 /* Style spécifique pour le bouton Contact */
@@ -248,6 +267,32 @@ a:hover {
     background-color: #8a3f3f;
     box-shadow: 0 4px 8px rgba(153, 74, 73, 0.3);
     transform: translateY(-2px) scale(1.02);
+}
+
+/* Responsive : ajustement pour mobile */
+@media (max-width: 768px) {
+    .nav {
+        flex-wrap: wrap; /* Permet au logo et au menu de passer à la ligne si nécessaire */
+        padding: 1rem;
+    }
+
+    .logo {
+        max-width: 150px; /* Réduit la taille du logo sur mobile */
+    }
+
+    .nav-menu-container {
+        margin: 0.5rem 0; /* Réduit l'espacement sur mobile */
+        overflow-x: auto; /* Garde le défilement horizontal */
+    }
+
+    .nav-menu {
+        gap: 0.75rem; /* Réduit l'espacement entre les éléments */
+    }
+
+    .nav-menu a, .nav-menu .contact-btn {
+        padding: 0.6rem 1rem;
+        font-size: 0.9rem;
+    }
 }
 
 /* Main Content */
