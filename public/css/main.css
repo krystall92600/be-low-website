@@ -304,8 +304,7 @@ a:hover {
 
 .card-img,
 .content-image img,
-.recrutement-image img,
-.map-image {
+.recrutement-image img {
     width: 100%;
     height: auto;
     border-radius: var(--border-radius-md);
@@ -313,14 +312,18 @@ a:hover {
     max-width: 100%;
 }
 
+.map-image {
+    width: 100%;
+    height: auto;
+    border-radius: var(--border-radius-md);
+    max-width: 100%;
+    box-shadow: none;
+}
+
 .card-img {
     height: 200px;
     object-fit: cover;
     margin-bottom: var(--spacing-md);
-}
-
-.map-image {
-    max-width: 80%;
 }
 
 /* Cards Grid - Pour les risques */
@@ -977,12 +980,6 @@ img:hover {
 /* Map Container */
 .map-container {
     margin-top: var(--spacing-lg);
-}
-
-.map-image {
-    max-width: 80%;
-    height: auto;
-    border-radius: var(--border-radius-md);
 }
 
 /* Éléments centrés */
