@@ -186,85 +186,87 @@ a:hover {
     backdrop-filter: blur(18px);
 }
 
+/* --- 1. Conteneur principal (flexbox) --- */
 .nav {
     display: flex;
-    justify-content: space-between; /* Garde le logo à gauche et le menu à droite */
+    justify-content: space-between;
     align-items: center;
     width: 100%;
-    padding: 1rem 2rem; /* Espacement latéral pour éviter le collage aux bords */
+    padding: 1rem 2rem;
     box-sizing: border-box;
+    background-color: transparent;
 }
 
-/* Logo - reste fixe à gauche */
+/* --- 2. Logo (fixe à gauche) --- */
 .logo {
     max-width: 180px;
     height: auto;
-    flex-shrink: 0; /* Empêche le logo de rétrécir */
+    flex-shrink: 0;
 }
 
-/* Conteneur pour le menu de navigation */
+/* --- 3. Conteneur pour le menu (défilement horizontal) --- */
 .nav-menu-container {
-    flex-grow: 1; /* Prend tout l'espace disponible */
-    overflow-x: auto; /* Défilement horizontal si nécessaire */
-    scrollbar-width: none; /* Masque la barre de défilement sur Firefox */
-    -ms-overflow-style: none; /* Masque la barre de défilement sur IE/Edge */
-    margin: 0 1rem; /* Espacement entre le logo et le menu */
+    flex-grow: 1;
+    overflow-x: auto;
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+    margin: 0 1rem;
 }
 
 .nav-menu-container::-webkit-scrollbar {
-    display: none; /* Masque la barre de défilement sur Chrome/Safari */
+    display: none;
 }
 
-/* Liste des liens - centrée dans son conteneur */
+/* --- 4. Liste des liens (centrée) --- */
 .nav-menu {
     display: flex;
     list-style: none;
     gap: var(--spacing-lg);
-    justify-content: center; /* Centre les éléments dans le conteneur */
+    justify-content: center;
     align-items: center;
     margin: 0;
     padding: 0;
-    white-space: nowrap; /* Force tout sur une seule ligne */
+    white-space: nowrap;
 }
 
-/* Style de base pour tous les liens */
-.nav-menu a {
+/* --- 5. Style de base pour TOUS les liens (appliqué en premier) --- */
+.nav-link {
     color: var(--color-text);
     font-weight: 500;
     padding: 12px 16px;
     border-radius: 6px;
-    transition: all var(--transition-normal) ease;
     text-decoration: none;
     display: inline-flex;
     align-items: center;
-    white-space: nowrap; /* Empêche le texte de se couper */
-    flex-shrink: 0; /* Empêche les éléments de rétrécir */
+    white-space: nowrap;
+    flex-shrink: 0;
+    transition: all var(--transition-normal) ease;
 }
 
-/* Effet au survol (pour tous les liens) */
-.nav-menu a:hover {
+/* --- 6. Effet de survol pour TOUS les liens (sauf Contact) --- */
+.nav-link:not(.nav-link--contact):hover {
     background-color: rgba(153, 74, 73, 0.1);
     color: var(--color-primary);
     transform: translateY(-2px);
 }
 
-/* Style spécifique pour le lien actif (page courante) */
-.nav-menu a[aria-current="page"] {
-    background-color: rgba(153, 74, 73, 0.2);
+/* --- 7. Style spécifique pour le lien actif (page courante) --- */
+.nav-link[aria-current="page"] {
     color: var(--color-primary);
     font-weight: 600;
 }
 
-/* Style spécifique pour le bouton Contact */
-.nav-menu .contact-btn {
+/* --- 8. Style spécifique pour le bouton Contact --- */
+.nav-link--contact {
     background-color: #994a49;
     color: white !important;
     padding: 12px 20px;
     border-radius: 8px;
 }
 
-.nav-menu .contact-btn:hover {
-    background-color: #803d3d;
+/* --- 9. Effet de survol pour le bouton Contact (UNIQUEMENT) --- */
+.nav-link--contact:hover {
+    background-color: #803d3d; /* Rouge foncé fixe */
     box-shadow: 0 4px 8px rgba(153, 74, 73, 0.3);
     transform: translateY(-2px) scale(1.02);
 }
